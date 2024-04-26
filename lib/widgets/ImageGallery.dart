@@ -11,6 +11,7 @@ class ImageGallery extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: GridView.builder(
+        shrinkWrap: true,
         itemCount: 4,
         gridDelegate:
             const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
