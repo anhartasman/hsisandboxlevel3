@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:responsivedashboard/widgets/item/PromoItem.dart';
 import 'package:responsivedashboard/widgets/ImageGallery.dart';
+import 'package:responsivedashboard/widgets/list/NewsList.dart';
+import 'package:responsivedashboard/widgets/list/PromoList.dart';
 import '../constants.dart';
 import '../util/my_box.dart';
 import '../util/my_tile.dart';
@@ -38,44 +41,14 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
 
                   // list of previous days
                   Expanded(
-                    child: ListView.builder(
-                      itemCount: 7,
-                      itemBuilder: (context, index) {
-                        return const MyTile();
-                      },
-                    ),
+                    child: NewsList(),
                   ),
                 ],
               ),
             ),
             // second half of page
             Expanded(
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      height: 400,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Colors.grey[400],
-                      ),
-                    ),
-                  ),
-                  // list of stuff
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Colors.grey[200],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              child: PromoList(),
             ),
           ],
         ),

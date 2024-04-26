@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsivedashboard/constants.dart';
 import 'package:responsivedashboard/widgets/ImageGallery.dart';
+import 'package:responsivedashboard/widgets/list/NewsList.dart';
 import '../util/my_box.dart';
 import '../util/my_tile.dart';
 
@@ -30,12 +31,7 @@ class _TabletScaffoldState extends State<TabletScaffold> {
 
             // list of previous days
             Expanded(
-              child: ListView.builder(
-                itemCount: 6,
-                itemBuilder: (context, index) {
-                  return const MyTile();
-                },
-              ),
+              child: NewsList(),
             ),
           ],
         ),

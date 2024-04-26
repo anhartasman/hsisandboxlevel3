@@ -3,6 +3,7 @@ import 'package:responsivedashboard/constants.dart';
 import 'package:responsivedashboard/util/my_box.dart';
 import 'package:responsivedashboard/util/my_tile.dart';
 import 'package:responsivedashboard/widgets/ImageGallery.dart';
+import 'package:responsivedashboard/widgets/list/NewsList.dart';
 
 class MobileScaffold extends StatefulWidget {
   const MobileScaffold({Key? key}) : super(key: key);
@@ -30,12 +31,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
 
             // list of previous days
             Expanded(
-              child: ListView.builder(
-                itemCount: 4,
-                itemBuilder: (context, index) {
-                  return const MyTile();
-                },
-              ),
+              child: NewsList(),
             ),
           ],
         ),
