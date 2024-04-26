@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsivedashboard/constants.dart';
+import 'package:responsivedashboard/widgets/ImageGallery.dart';
 import '../util/my_box.dart';
 import '../util/my_tile.dart';
 
@@ -24,17 +25,7 @@ class _TabletScaffoldState extends State<TabletScaffold> {
             // first 4 boxes in grid
             AspectRatio(
               aspectRatio: 4,
-              child: SizedBox(
-                width: double.infinity,
-                child: GridView.builder(
-                  itemCount: 4,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 4),
-                  itemBuilder: (context, index) {
-                    return MyBox();
-                  },
-                ),
-              ),
+              child: ImageGallery(),
             ),
 
             // list of previous days
